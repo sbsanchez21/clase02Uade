@@ -1,0 +1,57 @@
+Temas Clase 02:
+==============
+TPO:
+====
+- ¿Que deben entregar? 
+	- trabajo grupal
+	- 1er entrega front-end: (opcional html, CSS, js), react
+	- 2da entrega back-end: java springboot, Api RESTful, Spring data JPA, Autenticación y autorización, Docker
+
+
+CSS3:
+===== 
+- googleIASinCSS.html ver ejemplo de html con css acoplado
+- introducción a css3 
+- Como colocar estilos a un html: inline, head y externo
+- estructura de una declaración css: img estructuraCss3
+- selectores etiqueta, clase, id, holaCSS.html 
+- referencia de css: w3school, mdn 
+	- Modelo de Caja: margin, padding, border
+	- Medidas: em, rem
+	- Diseño: 
+		- posicionamiento: https://developer.mozilla.org/en-US/docs/Web/CSS/position, ver src
+		- diplay: ver src
+		- flexbox: https://codepen.io/enxaneta/full/adLPwv, ver src 
+	- selectores avanzados: pseudoclases, pseudoelementos, atributo, combinados
+- inspección de css en navegador
+	
+Recursos CSS:
+=============
+- googlefonts https://fonts.google.com/
+- animate.css,     https://animate.style/     
+- aos https://michalsnik.github.io/aos/
+- stellar https://markdalgleish.com/projects/stellar.js/
+
+Framewoks CSS:
+===============
+¿Para que sirven?
+Concepto Responsive
+Ver imagen Bootstrap-Tailwind-Bulma.png
+Hacer ejemplo de uso de Bootstrap
+	- margin, padding, colores
+	- flex 
+
+- Práctica grupal 15min: hacer página google actual utilizando lo visto hasta ahora CSS, recursos y sus frameworks
+
+
+HTTP:
+====
+- ¿Que ocurre cuando solicitamos una página web? por ejemplo de google
+powershell
+ping
+nslookup
+
+
+
+Control de Versiones:
+====================
