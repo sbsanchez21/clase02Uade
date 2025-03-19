@@ -232,6 +232,41 @@ Instalación y config Git, Github:
 	Verificación de la instalación: git --version
 
 
+Áreas de un Repositorio Git, Repo GitHub:
+PC del desarrollador:	
+	Working Directory (Directorio de Trabajo).
+	Staging Area (Área de Preparación).
+	Repository (Repositorio).
+
+Repositorio remoto GitHub o GitLab:
+	Repositorio Remoto (Opcional):
+
+
+
+
+Working Directory (Directorio de Trabajo):
+	Es la carpeta local en tu máquina donde trabajas con los archivos del proyecto.
+	Aquí es donde editas, creas o eliminas archivos
+	Los cambios aquí no están registrados por Git hasta que los agregas al Staging Area.
+
+Staging Area (Área de Preparación).
+	Es un área intermedia donde preparas los cambios que quieres incluir en el próximo commit
+	Permite seleccionar qué cambios quieres incluir en el commit.
+	Puedes agregar solo algunos archivos
+	git add <archivo> 
+	git add .
+
+Repository (Repositorio)
+	Es donde Git almacena todo el historial de cambios.
+	git commit -m "Mensaje descriptivo" Guarda los cambios del Staging Area en el repositorio.
+
+
+Repositorio Remoto (Opcional):	
+	Donde se almacena tu repo local 
+	git push
+
+
+
 Comandos Básicos de Git:
 	Inicializar un repositorio: 
 		git init
@@ -241,7 +276,7 @@ Comandos Básicos de Git:
 
 	Ver el estado actual del repositorio: 
 		git status
-		archivos modificados, en staging area, untracked,
+		archivos modificados, nuevo, en staging area, untracked, commiteados
 
 
 	Agregar archivos al staging area: git add <archivo>.
