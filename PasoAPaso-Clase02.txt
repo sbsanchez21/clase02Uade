@@ -55,3 +55,120 @@ nslookup
 
 Control de Versiones:
 ====================
+
+Introducción al Control de Versiones
+   - ¿Qué es el control de versiones y por qué es importante?
+   - Tipos de sistemas de control de versiones:
+     - Locales (ejemplo: copias manuales de archivos).
+     - Centralizados (ejemplo: SVN).
+     - Distribuidos (ejemplo: Git).
+
+¿Para que sirve Git?
+¿Para qué Sirven GitHub y GitLab?
+Instalación y config Git, Github:
+Áreas de un Repositorio Git, Repo GitHub:
+
+Comandos Básicos de Git
+   - Inicializar un repositorio: `git init`.
+   - Ver el estado del repositorio: `git status`.
+   - Agregar archivos al staging area: `git add <archivo>`.
+   - Confirmar cambios: `git commit -m "Mensaje descriptivo"`.
+   - Ver el historial de commits: `git log`.
+
+Branches en Git
+   - ¿Qué es una rama y por qué usarla?
+   - Crear una rama: `git branch <nombre-rama>`.
+   - Cambiar de rama: `git checkout <nombre-rama>`.
+   - Fusionar ramas: `git merge <nombre-rama>`.
+   - Eliminar una rama: `git branch -d <nombre-rama>`.
+
+Trabajo con Repositorios Remotos
+   - Clonar un repositorio remoto: `git clone <url-repositorio>`.
+   - Vincular un repositorio remoto: `git remote add origin <url-repositorio>`.
+   - Enviar cambios al repositorio remoto: `git push origin <nombre-rama>`.
+   - Traer cambios del repositorio remoto: `git pull origin <nombre-rama>`.
+   - Ver repositorios remotos: `git remote -v`.
+
+
+
+6. Resolución de Conflictos
+   - ¿Qué es un conflicto y cómo se produce?
+   - Identificar conflictos: `git status`.
+   - Resolver conflictos manualmente (editar archivos conflictivos).
+   - Marcar conflictos como resueltos: `git add <archivo>`.
+   - Finalizar la fusión: `git commit`.
+
+
+
+7. Etiquetas (Tags)
+   - ¿Qué son las etiquetas y para qué sirven?
+   - Crear una etiqueta ligera: `git tag <nombre-etiqueta>`.
+   - Crear una etiqueta anotada: `git tag -a <nombre-etiqueta> -m "Mensaje"`.
+   - Enviar etiquetas al repositorio remoto: `git push origin <nombre-etiqueta>`.
+
+
+
+8. Deshacer Cambios
+   - Deshacer cambios en el working directory: `git checkout -- <archivo>`.
+   - Deshacer cambios en el staging area: `git reset <archivo>`.
+   - Deshacer commits: `git reset --soft`, `git reset --mixed`, `git reset --hard`.
+   - Revertir un commit: `git revert <hash-commit>`.
+
+
+
+9. Flujos de Trabajo (Workflows)
+   - Flujo centralizado.
+   - Flujo de ramas de características (Feature Branch Workflow).
+   - Git Flow (ramas `main`, `develop`, `feature`, `release`, `hotfix`).
+   - GitHub Flow (ramas `main` y `feature`).
+
+
+
+10. Herramientas y Plataformas de Git
+   - GitHub: Creación de repositorios, issues, pull requests.
+   - GitLab: CI/CD integrado, gestión de proyectos.
+   - Bitbucket: Integración con Jira, pipelines.
+   - Clientes gráficos de Git (ejemplo: Sourcetree, GitKraken).
+
+
+
+11. Integración de Git con Java
+   - Uso de `.gitignore` para excluir archivos (ejemplo: `target/`, `.classpath`, `.project`).
+   - Integración de Git con IDEs Java (IntelliJ IDEA, Eclipse, VS Code).
+   - Automatización de tareas con Git Hooks (ejemplo: pre-commit, post-commit).
+
+
+
+12. Buenas Prácticas en el Control de Versiones
+   - Escribir mensajes de commit claros y descriptivos.
+   - Mantener commits atómicos (un cambio por commit).
+   - Evitar archivos binarios en el repositorio.
+   - Revisar el historial de cambios antes de fusionar ramas.
+
+
+
+13. Temas Avanzados
+   - Rebase interactivo: `git rebase -i`.
+   - Stashing: Guardar cambios temporales (`git stash`, `git stash pop`).
+   - Submódulos de Git: `git submodule`.
+   - Bisect: Búsqueda binaria de bugs (`git bisect`).
+
+
+
+14. Proyecto Final Integrador
+   - Creación de un proyecto Java con control de versiones.
+   - Uso de ramas para desarrollar características.
+   - Resolución de conflictos y fusión de ramas.
+   - Despliegue del proyecto en GitHub/GitLab.
+
+
+
+Consejos para el Aprendizaje
+1. Practica constantemente: Crea repositorios de prueba y experimenta con los comandos.
+2. Documentación oficial: Revisa la [documentación oficial de Git](https://git-scm.com/doc).
+3. Comunidad: Únete a foros como Stack Overflow o comunidades de Git en Discord/Reddit.
+4. Cursos y tutoriales: Utiliza plataformas como Udemy, Coursera, o YouTube para reforzar conceptos.
+
+
+
+Siguiendo este listado de manera ordenada y dedicando tiempo a cada tema, estarás preparado para dominar el control de versiones con Git en el contexto de desarrollo Java. ¡Buena suerte en tu aprendizaje! 😊
