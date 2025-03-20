@@ -256,7 +256,7 @@ Staging Area (Área de Preparación).
 	git add .
 
 Repository (Repositorio)
-	Es donde Git almacena todo el historial de cambios.
+	Es donde Git almacena todo el historial completo de cambios, ramas, tags y configuraciones
 	git commit -m "Mensaje descriptivo" Guarda los cambios del Staging Area en el repositorio.
 
 
@@ -267,18 +267,56 @@ Repositorio Remoto (Opcional):
 
 
 Comandos Básicos de Git
-   - Inicializar un repositorio: `git init`.
+   - Inicializar un repositorio: `git init`. En VSC se ve un indicador
    - Ver el estado del repositorio: `git status`.
    - Agregar archivos al staging area: `git add <archivo>`.
    - Confirmar cambios: `git commit -m "Mensaje descriptivo"`.
    - Ver el historial de commits: `git log`.
 
-Branches en Git
+Branches ramas en Git
    - ¿Qué es una rama y por qué usarla?
+	Es una línea de desarrollo independiente que permite trabajar en nuevas funcionalidades, correcciones de errores o experimentos sin interferir con el código estable principal. 
+   
    - Crear una rama: `git branch <nombre-rama>`.
-   - Cambiar de rama: `git checkout <nombre-rama>`.
+	Estamos en la en la rama main y queremos crear una nueva rama para desarrollar una funcionalidad de login:
+	git branch feature/login
+	Esto crea una rama llamada feature/login, pero no cambia automáticamente a ella.
+
+   - Cambiar de rama: `git checkout <nombre-rama>`.`git switch <nombre-rama>`.
+	Este comando te permite moverte a una rama específica para empezar a trabajar en ella.
+	git checkout feature/login
+	git switch feature/login
+
    - Fusionar ramas: `git merge <nombre-rama>`.
+	Supongamos que terminaste de desarrollar la funcionalidad de login en feature/login y quieres fusionarla con main:
+   	git checkout main       # Cambias a la rama main
+	git merge feature/login  # Fusionas feature/login en main
+	Si no hay conflictos, Git fusionará automáticamente los cambios. Si hay conflictos, Git te pedirá que los resuelvas manualmente.
+
    - Eliminar una rama: `git branch -d <nombre-rama>`.
+	Después de fusionar feature/login con main, ya no necesitas la rama feature/login. Para eliminarla:
+	git branch -d feature/login
+
+	Ejemplo completo de flujo de trabajo con ramas:
+	================================================
+	Crear una nueva rama para una funcionalidad:
+	git branch feature/login
+	git checkout feature/login
+
+	Verifico en que rama estoy
+	git branch
+
+	Hacer cambios y confirmarlos:
+	git add .
+	git commit -m "Añadir funcionalidad de login"
+	
+	Fusionar la rama con main:
+	git checkout main
+	git merge feature/login
+
+	Eliminar la rama después de fusionar:
+	git branch -d feature/login
+
 
 Trabajo con Repositorios Remotos
    - Clonar un repositorio remoto: `git clone <url-repositorio>`.
