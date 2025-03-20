@@ -265,13 +265,22 @@ Repositorio Remoto (Opcional):
 	git push
 
 
-
 Comandos Básicos de Git
    - Inicializar un repositorio: `git init`. En VSC se ve un indicador
    - Ver el estado del repositorio: `git status`.
    - Agregar archivos al staging area: `git add <archivo>`.
    - Confirmar cambios: `git commit -m "Mensaje descriptivo"`.
    - Ver el historial de commits: `git log`.
+
+Vincular un repo local a uno remoto y subir repo a Github:
+	- crear repo en github o gitlab, obtener url
+	- vincular repositorio
+	git remote add origin https://github.com/sbsanchez21/clase02Uade.git
+	- verificar si están vinculados 
+	git remote -v
+	- subir los cambios del repo local al remoto 
+	git push -u origin main
+
 
 Branches ramas en Git
    - ¿Qué es una rama y por qué usarla?
