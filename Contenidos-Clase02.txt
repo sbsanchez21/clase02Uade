@@ -145,7 +145,7 @@ Los estilos se aplican en cascada:
 
 ¿Que ocurre cuando solicitamos una página web? por ejemplo de google
 1. El usuario introduce la URL en el navegador
-2. Resolución DNS (Domain Name System): traducción de nombre domininio a ip, nslookup, ping
+2. Resolución DNS (Domaster Name System): traducción de nombre domininio a ip, nslookup, ping
 3. Establecimiento de la conexión (TCP/IP)
 4. Solicitud HTTP (Request)
 GET / HTTP/1.1
@@ -279,7 +279,7 @@ Vincular un repo local a uno remoto y subir repo a Github:
 	- verificar si están vinculados 
 	git remote -v
 	- subir los cambios del repo local al remoto 
-	git push -u origin main
+	git push -u origin master
 
 
 Branches ramas en Git
@@ -287,7 +287,7 @@ Branches ramas en Git
 	Es una línea de desarrollo independiente que permite trabajar en nuevas funcionalidades, correcciones de errores o experimentos sin interferir con el código estable principal. 
    
    - Crear una rama: `git branch <nombre-rama>`.
-	Estamos en la en la rama main y queremos crear una nueva rama para desarrollar una funcionalidad de login:
+	Estamos en la en la rama master y queremos crear una nueva rama para desarrollar una funcionalidad de login:
 	git branch feature/login
 	Esto crea una rama llamada feature/login, pero no cambia automáticamente a ella.
 
@@ -297,13 +297,13 @@ Branches ramas en Git
 	git switch feature/login
 
    - Fusionar ramas: `git merge <nombre-rama>`.
-	Supongamos que terminaste de desarrollar la funcionalidad de login en feature/login y quieres fusionarla con main:
-   	git checkout main       # Cambias a la rama main
-	git merge feature/login  # Fusionas feature/login en main
+	Supongamos que terminaste de desarrollar la funcionalidad de login en feature/login y quieres fusionarla con master:
+   	git checkout master       # Cambias a la rama master
+	git merge feature/login  # Fusionas feature/login en master
 	Si no hay conflictos, Git fusionará automáticamente los cambios. Si hay conflictos, Git te pedirá que los resuelvas manualmente.
 
    - Eliminar una rama: `git branch -d <nombre-rama>`.
-	Después de fusionar feature/login con main, ya no necesitas la rama feature/login. Para eliminarla:
+	Después de fusionar feature/login con master, ya no necesitas la rama feature/login. Para eliminarla:
 	git branch -d feature/login
 
 	Ejemplo completo de flujo de trabajo con ramas:
@@ -322,8 +322,8 @@ Branches ramas en Git
 	Subir rama a Github
 	git push -u origin feature/login
 
-	Fusionar la rama con main:
-	git checkout main
+	Fusionar la rama con master:
+	git checkout master
 	git merge feature/login
 
 	Eliminar la rama después de fusionar:
