@@ -201,7 +201,7 @@ Es un sistema que permite gestionar y rastrear los cambios realizados en los arc
 Tipos de sistemas de control de versiones:
 	-Sistemas de Control de Versiones Locales: 
 		copias manuales de archivos
-	-Sistemas de Control de Versiones Centralizados (CVCS) (ejemplo: SVN): 
+	-Sistemas de Control de Versiones Centralizados (CVCS) (ejemplo: SVN + TortoiseSVN o Integración con IDEs: Eclipse, IntelliJ IDEA o NetBeans): 
 		servidor central que almacena todas las versiones de los archivos
 		control de acceso y permisos
 		historial de cambios centralizado
@@ -224,12 +224,12 @@ Colaboración en Equipo, trabajar en equipo
 
 
 Instalación y config Git, Github:
-	Instalación git
-	Crear cuenta en github
+	Instalar git: git bash, powershell, terminal vsc
 	Configuración inicial: 
 		git config --global user.name "Tu Nombre"
 		git config --global user.email "tu@email.com"
 	Verificación de la instalación: git --version
+	Crear cuenta en github
 
 
 Áreas de un Repositorio Git, Repo GitHub:
@@ -238,9 +238,8 @@ PC del desarrollador:
 	Staging Area (Área de Preparación).
 	Repository (Repositorio).
 
-Repositorio remoto GitHub o GitLab:
+Repositorio en servidor remoto GitHub o GitLab:
 	Repositorio Remoto (Opcional):
-
 
 
 
@@ -267,18 +266,47 @@ Repositorio Remoto (Opcional):
 
 
 
-Comandos Básicos de Git:
-	Inicializar un repositorio: 
-		git init
-		este comando transforma un directorio común en un repositorio de Git, empieza a trackear o rastrear cambios
-		crea un subdirectorio oculto llamado .git, eEste directorio contiene todos los metadatos que Git utiliza para realizar el seguimiento de los cambios en tu proyecto.
+Comandos Básicos de Git
+   - Inicializar un repositorio: `git init`.
+   - Ver el estado del repositorio: `git status`.
+   - Agregar archivos al staging area: `git add <archivo>`.
+   - Confirmar cambios: `git commit -m "Mensaje descriptivo"`.
+   - Ver el historial de commits: `git log`.
+
+Branches en Git
+   - ¿Qué es una rama y por qué usarla?
+   - Crear una rama: `git branch <nombre-rama>`.
+   - Cambiar de rama: `git checkout <nombre-rama>`.
+   - Fusionar ramas: `git merge <nombre-rama>`.
+   - Eliminar una rama: `git branch -d <nombre-rama>`.
+
+Trabajo con Repositorios Remotos
+   - Clonar un repositorio remoto: `git clone <url-repositorio>`.
+   - Vincular un repositorio remoto: `git remote add origin <url-repositorio>`.
+   - Enviar cambios al repositorio remoto: `git push origin <nombre-rama>`.
+   - Traer cambios del repositorio remoto: `git pull origin <nombre-rama>`.
+   - Ver repositorios remotos: `git remote -v`.
+
+Resolución de Conflictos
+   - ¿Qué es un conflicto y cómo se produce?
+   - Identificar conflictos: `git status`.
+   - Resolver conflictos manualmente (editar archivos conflictivos).
+   - Marcar conflictos como resueltos: `git add <archivo>`.
+   - Finalizar la fusión: `git commit`.
+
+Deshacer Cambios
+   - Deshacer cambios en el working directory: `git checkout -- <archivo>`.
+   - Deshacer cambios en el staging area: `git reset <archivo>`.
+   - Deshacer commits: `git reset --soft`, `git reset --mixed`, `git reset --hard`.
+   - Revertir un commit: `git revert <hash-commit>`.
 
 
-	Ver el estado actual del repositorio: 
-		git status
-		archivos modificados, nuevo, en staging area, untracked, commiteados
+Integración de Git con Java
+   - Uso de `.gitignore` para excluir archivos (ejemplo: `target/`, `.classpath`, `.project`).
 
+Buenas Prácticas en el Control de Versiones
+   - Escribir mensajes de commit claros y descriptivos.
+   - Mantener commits atómicos (un cambio por commit).
+   - Evitar archivos binarios en el repositorio.
+   - Revisar el historial de cambios antes de fusionar ramas.
 
-	Agregar archivos al staging area: git add <archivo>.
-	Confirmar cambios: git commit -m "Mensaje descriptivo".
-	Ver el historial de commits: git log.
